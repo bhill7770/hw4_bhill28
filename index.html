@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css"/>
+	<title>Brianna's Favorite TV shows!</title>
+</head>
+<body>
+	<h1>Brianna's Favorite Tv Shows</h1>
+<ol>
+{%for i in range(0, len)%}
+	{%if Tv_shows[i] == "See No Evil"%}
+		<li class= "favoriteTvShow">{{Tv_shows[i]}}</li>
+		{%else%}
+		<li>{{Tv_shows[i]}}</li>
+	{%endif%}
+	<img src= {{Pictures[i]}} width="200" height="200" >
+{%endfor%}
+</ol>
+</body>
+</html>
